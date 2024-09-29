@@ -16,11 +16,15 @@ To validate international data you can use following methods.
 - `isValidPercentage(String percentage)`: Validates a percentage using regex.
 - `isValidCreditCard(String creditCard)`: Validates a credit card number using regex.
 - `isValidDate(String date)`: Validates a date using regex.
+- `isValidImage(String image)`: validates an image using regex.
+- `isValidYear(String year)`: Validates a year using regex.
+- `isValidMonth(String month)`: Validates a month using regex.
+- `isValidDay(String day)`: Validates a day using regex.
 
 ### Validate Sri Lankan data
 
 To validate Sri Lankan data you can use following methods.
 
 - `isValidSlPhone(String phone)`: Validates a Sri Lankan phone number using regex.
-- `isValidSlNic(String nic)`: Validates a Sri Lankan National Identity Card (NIC) using regex.
+- `isValidSlNic(String nic)`: Validates a Old Sri Lankan National Identity Card (NIC) using regex.
 - `isValidSlNewNic(String nic)`: Validates a new Sri Lankan National Identity Card (NIC) using regex.
