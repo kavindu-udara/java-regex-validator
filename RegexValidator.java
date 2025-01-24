@@ -1,5 +1,47 @@
 package models;
 
+/**
+ * The RegexValidator class provides static methods to validate various types of
+ * data using regular expressions.
+ * 
+ * Methods:
+ * 
+ * - isValidEmail(String email): Validates an email address.
+ * - isValidPhone(String phone): Validates a phone number.
+ * - isValidSlPhone(String phone): Validates a Sri Lankan phone number.
+ * - isValidName(String name): Validates a name.
+ * - isValidAddress(String address): Validates an address.
+ * - isValidDob(String dob): Validates a date of birth.
+ * - isValidGender(String gender): Validates a gender.
+ * - isValidPassword(String password): Validates a password.
+ * - isValidId(String id): Validates an ID.
+ * - isValidNumber(String number): Validates a number.
+ * - isValidDate(String date): Validates a date.
+ * - isValidTime(String time): Validates a time.
+ * - isValidUrl(String url): Validates a URL.
+ * - isValidCode(String code): Validates a code.
+ * - isValidAmount(String amount): Validates an amount.
+ * - isValidPercentage(String percentage): Validates a percentage.
+ * - isValidText(String text): Validates a text.
+ * - isValidDecimal(String decimal): Validates a decimal number.
+ * - isValidInteger(String integer): Validates an integer.
+ * - isValidZipCode(String zipCode): Validates a zip code.
+ * - isValidSSN(String ssn): Validates a social security number (SSN).
+ * - isValidCreditCard(String creditCard): Validates a credit card number.
+ * - isValidIBAN(String iban): Validates an International Bank Account Number
+ * (IBAN).
+ * - isValidVAT(String vat): Validates a Value Added Tax (VAT) number.
+ * - isValidISBN(String isbn): Validates an International Standard Book Number
+ * (ISBN).
+ * - isValidSlNic(String nic): Validates a Sri Lankan National Identity Card
+ * (NIC).
+ * - isValidSlNewNic(String nic): Validates a new Sri Lankan National Identity
+ * Card (NIC).
+ * - isValidImage(String image): Validates an image file.
+ * - isValidYear(String year): Validates a year.
+ * - isValidMonth(String month): Validates a month.
+ * - isValidDay(String day): Validates a day.
+ */
 public class RegexValidator {
     /**
      * Validates an email address using regex.
@@ -148,14 +190,14 @@ public class RegexValidator {
      * @return true if the date is valid, false otherwise
      *         <p>
      *         The regex pattern is as follows: <br>
-     *         - The date must be in the form of "YYYY-MM-DD" or "YYYY/MM/DD" or
-     *         "YYYY.MM.DD" <br>
-     *         - The year must be between 1900 and 2099 <br>
-     *         - The month must be between 1 and 12 <br>
-     *         - The day must be between 1 and 31 <br>
+     *         - The date must be in the form of "DD-MM-YYYY" or "DD/MM/YYYY" or
+     *         "DD.MM.YYYY" <br>
+     *         - The year can be any valid year <br>
+     *         - The month must be between 01 and 12 <br>
+     *         - The day must be between 01 and 31 <br>
      */
     public static boolean isValidDate(String date) {
-        return date.matches("^(19|20)\\d\\d[- /.](0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])$");
+        return date.matches("^(\\d{2})[- /.](\\d{2})[- /.](\\d{4})$");
     }
 
     /**
